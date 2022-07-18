@@ -1,0 +1,1690 @@
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/swift.min.js"></script>
+<script>hljs.highlightAll();</script></head><h1>Code generation with DocumentUI</h1><div style="max-height:50%;overflow:auto"><pre><code class="language-swift">class IphonexViewController: UIViewController {
+    lazy var twoColumnOptionWithSubtextSelectedStateView: TwocolumnoptionwithsubtextselectedstateView = TwocolumnoptionwithsubtextselectedstateView(autolayout: true).add(to: view) { arg in
+        arg.layer.cornerRadius = 15.0
+        arg.clipsToBounds = true
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: -336.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 1643.0),
+            arg.widthAnchor.constraint(equalToConstant: 345.0),
+            arg.heightAnchor.constraint(equalToConstant: 75.0)
+        ])
+    }
+    lazy var rightSideView: RightsideView = RightsideView(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 16.3306884765625),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 288.66680908203125),
+            arg.widthAnchor.constraint(equalToConstant: 66.66122436523438),
+            arg.heightAnchor.constraint(equalToConstant: 11.33599853515625)
+        ])
+    }
+    lazy var leftSideView: LeftsideView = LeftsideView(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 11.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 19.0),
+            arg.widthAnchor.constraint(equalToConstant: 54.0),
+            arg.heightAnchor.constraint(equalToConstant: 21.0)
+        ])
+    }
+    lazy var backuppurchaseView: BackuppurchaseView = BackuppurchaseView(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 746.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 107.0),
+            arg.widthAnchor.constraint(equalToConstant: 162.0),
+            arg.heightAnchor.constraint(equalToConstant: 20.0)
+        ])
+    }
+    lazy var трудностисоплатойLabel: UILabel = UILabel(autolayout: true).add(to: view) { arg in
+        arg.text = "Трудности с оплатой?"
+        arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        arg.font = UIFont.systemFont(ofSize: 12.0, weight: .regular) //UIFont.Inter.regular(12.0)
+        arg.numberOfLines = 0
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 648.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 222.0),
+            arg.widthAnchor.constraint(equalToConstant: 133.0)
+        ])
+    }
+    lazy var feautersView: FeautersView = FeautersView(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 410.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32.0),
+            arg.widthAnchor.constraint(equalToConstant: 311.0),
+            arg.heightAnchor.constraint(equalToConstant: 226.0)
+        ])
+    }
+    lazy var titleLabel: UILabel = UILabel(autolayout: true).add(to: view) { arg in
+        arg.text = "Subscribe \nand be PRO"
+        arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        arg.font = UIFont.systemFont(ofSize: 46.0, weight: .regular) //UIFont.TT Hoves.regular(46.0)
+        arg.numberOfLines = 0
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 270.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            arg.widthAnchor.constraint(equalToConstant: 345.0)
+        ])
+    }
+    lazy var conf2View: Conf2View = Conf2View(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 44.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 67.0),
+            arg.widthAnchor.constraint(equalToConstant: 278.0001220703125),
+            arg.heightAnchor.constraint(equalToConstant: 210.0)
+        ])
+    }
+    lazy var component68View: Component68View = Component68View(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 682.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            arg.widthAnchor.constraint(equalToConstant: 345.0),
+            arg.heightAnchor.constraint(equalToConstant: 48.0)
+        ])
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let glr = CAGradientLayer()
+        glr.type = .axial
+        glr.colors = [UIColor(red: 0.9921568632125854, green: 0.3803921639919281, blue: 0.3803921639919281, alpha: 1.0).cgColor,UIColor(red: 0.9375, green: 0.2421875, blue: 0.5740413665771484, alpha: 1.0).cgColor,UIColor(red: 0.6313725709915161, green: 0.3450980484485626, blue: 0.8235294222831726, alpha: 1.0).cgColor]
+        glr.locations = [0.0,0.5364583134651184,1.0]
+        glr.startPoint = CGPoint(x: 1.3912789751649099e-08, y: -0.4966109898596187)
+        glr.endPoint = CGPoint(x: 1.000000013853118, y: -0.4992760831519263)
+        glr.frame = view.frame
+        view.layer.addSublayer(glr)
+        _ = twoColumnOptionWithSubtextSelectedStateView
+        _ = rightSideView
+        _ = leftSideView
+        _ = backuppurchaseView
+        _ = трудностисоплатойLabel
+        _ = feautersView
+        _ = titleLabel
+        _ = conf2View
+        _ = component68View
+    }
+}
+extension IphonexViewController {
+    class TwocolumnoptionwithsubtextselectedstateView: UIView {
+        lazy var headerView: HeaderView = HeaderView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 15.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 325.0),
+                arg.heightAnchor.constraint(equalToConstant: 21.0)
+            ])
+        }
+        lazy var subtextView: SubtextView = SubtextView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 44.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 325.0),
+                arg.heightAnchor.constraint(equalToConstant: 16.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.12916666269302368, green: 0.12916666269302368, blue: 0.12916666269302368, alpha: 1.0)
+            _ = headerView
+            _ = subtextView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class RightsideView: UIView {
+        lazy var batteryView: BatteryView = BatteryView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.002685546875),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 42.33319091796875),
+                arg.widthAnchor.constraint(equalToConstant: 24.328033447265625),
+                arg.heightAnchor.constraint(equalToConstant: 11.33331298828125)
+            ])
+        }
+        lazy var wifiView: WifiView = WifiView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 22.027069091796875),
+                arg.widthAnchor.constraint(equalToConstant: 15.272369384765625),
+                arg.heightAnchor.constraint(equalToConstant: 10.965576171875)
+            ])
+        }
+        lazy var mobileSignalView: MobilesignalView = MobilesignalView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.3359375),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 17.0),
+                arg.heightAnchor.constraint(equalToConstant: 10.66668701171875)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = batteryView
+            _ = wifiView
+            _ = mobileSignalView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class LeftsideView: UIView {
+        lazy var statusBartimeView: StatusbartimeView = StatusbartimeView(autolayout: true).add(to: self) { arg in
+            arg.layer.cornerRadius = 24.0
+            arg.clipsToBounds = true
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 54.0),
+                arg.heightAnchor.constraint(equalToConstant: 21.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = statusBartimeView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class BackuppurchaseView: UIView {
+        lazy var продолжитьбезподпискиLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "Продолжить без подписки"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 12.0, weight: .regular) //UIFont.Inter.regular(12.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 162.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = продолжитьбезподпискиLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class FeautersView: UIView {
+        lazy var frame14View: Frame14View = Frame14View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 311.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var frame15View: Frame15View = Frame15View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 56.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 311.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var frame16View: Frame16View = Frame16View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 112.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 311.0),
+                arg.heightAnchor.constraint(equalToConstant: 48.0)
+            ])
+        }
+        lazy var frame17View: Frame17View = Frame17View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 176.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 311.0),
+                arg.heightAnchor.constraint(equalToConstant: 50.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = frame14View
+            _ = frame15View
+            _ = frame16View
+            _ = frame17View
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Conf2View: UIView {
+        lazy var rectangle54View: Rectangle54View = Rectangle54View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 149.2808837890625),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 28.95703125),
+                arg.widthAnchor.constraint(equalToConstant: 9.06304931640625),
+                arg.heightAnchor.constraint(equalToConstant: 9.09356689453125)
+            ])
+        }
+        lazy var rectangle52View: Rectangle52View = Rectangle52View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 87.1640625),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 58.9130859375),
+                arg.widthAnchor.constraint(equalToConstant: 11.2540283203125),
+                arg.heightAnchor.constraint(equalToConstant: 11.2918701171875)
+            ])
+        }
+        lazy var rectangle51View: Rectangle51View = Rectangle51View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 118.222412109375),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 9.41253662109375),
+                arg.heightAnchor.constraint(equalToConstant: 9.4442138671875)
+            ])
+        }
+        lazy var vector5View: Vector5View = Vector5View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 63.1187744140625),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 233.65451049804688),
+                arg.widthAnchor.constraint(equalToConstant: 15.687652587890625),
+                arg.heightAnchor.constraint(equalToConstant: 13.05499267578125)
+            ])
+        }
+        lazy var rectangleView: RectangleView = RectangleView(autolayout: true).add(to: self) { arg in
+            arg.layer.cornerRadius = 12.0
+            arg.clipsToBounds = true
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: -19.03582763671875),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15.9765625),
+                arg.widthAnchor.constraint(equalToConstant: 153.7728271484375),
+                arg.heightAnchor.constraint(equalToConstant: 214.40350341796875)
+            ])
+        }
+        lazy var rectangle1View: Rectangle1View = Rectangle1View(autolayout: true).add(to: self) { arg in
+            arg.layer.cornerRadius = 12.0
+            arg.clipsToBounds = true
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 66.90118408203125),
+                arg.widthAnchor.constraint(equalToConstant: 211.09893798828125),
+                arg.heightAnchor.constraint(equalToConstant: 210.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = rectangle54View
+            _ = rectangle52View
+            _ = rectangle51View
+            _ = vector5View
+            _ = rectangleView
+            _ = rectangle1View
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Component68View: UIView {
+        lazy var rectangle470View: Rectangle470View = Rectangle470View(autolayout: true).add(to: self) { arg in
+            arg.layer.cornerRadius = 10.0
+            arg.clipsToBounds = true
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 345.0),
+                arg.heightAnchor.constraint(equalToConstant: 48.0)
+            ])
+        }
+        lazy var подписатьсяза9вмесяцLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "Подписаться за $9 в год"
+            let colors = [UIColor(red: 0.9921568632125854, green: 0.3803921639919281, blue: 0.3803921639919281, alpha: 1.0).cgColor,UIColor(red: 0.9375, green: 0.2421875, blue: 0.5740413665771484, alpha: 1.0).cgColor,UIColor(red: 0.6313725709915161, green: 0.3450980484485626, blue: 0.8235294222831726, alpha: 1.0).cgColor]
+            let gradient = UIImage.gradiented(colors, size: 182.0, horizontal: true)
+            arg.textColor = UIColor(patternImage: gradient)
+            arg.font = UIFont.systemFont(ofSize: 16.0, weight: .medium) //UIFont.TT Hoves.medium(16.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 15.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 71.0),
+                arg.widthAnchor.constraint(equalToConstant: 182.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = rectangle470View
+            _ = подписатьсяза9вмесяцLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.TwocolumnoptionwithsubtextselectedstateView {
+    class HeaderView: UIView {
+        lazy var monthsLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "All time"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 18.0, weight: .bold) //UIFont.Arial.bold(18.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 63.0)
+            ])
+        }
+        lazy var Label: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "$49.99"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 18.0, weight: .bold) //UIFont.Arial.bold(18.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 83.0),
+                arg.widthAnchor.constraint(equalToConstant: 232.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = monthsLabel
+            _ = Label
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class SubtextView: UIView {
+        lazy var dayfreetrialLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = ""
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 14.0, weight: .regular) //UIFont.Arial.regular(14.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 0.0)
+            ])
+        }
+        lazy var weekLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = ""
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 14.0, weight: .regular) //UIFont.Arial.regular(14.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20.0),
+                arg.widthAnchor.constraint(equalToConstant: 295.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = dayfreetrialLabel
+            _ = weekLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.TwocolumnoptionwithsubtextselectedstateView.HeaderView {}
+
+extension IphonexViewController.TwocolumnoptionwithsubtextselectedstateView.SubtextView {}
+
+extension IphonexViewController.RightsideView {
+    class BatteryView: UIView {
+        lazy var rectangleView: RectangleView = RectangleView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 22.0),
+                arg.heightAnchor.constraint(equalToConstant: 11.33331298828125)
+            ])
+        }
+        lazy var combinedShapeView: CombinedshapeView = CombinedshapeView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 3.66668701171875),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 23.0),
+                arg.widthAnchor.constraint(equalToConstant: 1.328033447265625),
+                arg.heightAnchor.constraint(equalToConstant: 4.0)
+            ])
+        }
+        lazy var rectangle1View: Rectangle1View = Rectangle1View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 2.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 2.0),
+                arg.widthAnchor.constraint(equalToConstant: 18.0),
+                arg.heightAnchor.constraint(equalToConstant: 7.33331298828125)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = rectangleView
+            _ = combinedShapeView
+            _ = rectangle1View
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class WifiView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class MobilesignalView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.RightsideView.BatteryView {
+    class RectangleView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class CombinedshapeView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Rectangle1View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.LeftsideView {
+    class StatusbartimeView: UIView {
+        lazy var Label: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "9:41"
+            arg.textColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 15.0, weight: .semibold) //UIFont.SF Pro Text.semibold(15.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 1.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 54.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = Label
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.LeftsideView.StatusbartimeView {}
+
+extension IphonexViewController.BackuppurchaseView {}
+
+extension IphonexViewController.FeautersView {
+    class Frame14View: UIView {
+        lazy var frame96View: Frame96View = Frame96View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 40.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var безрекламыLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "Без рекламы"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 15.0, weight: .medium) //UIFont.TT Hoves.medium(15.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 8.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 48.0),
+                arg.widthAnchor.constraint(equalToConstant: 92.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = frame96View
+            _ = безрекламыLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Frame15View: UIView {
+        lazy var frame97View: Frame97View = Frame97View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 40.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var песенбезограниченийLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "14 800 песен без ограничений"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 15.0, weight: .medium) //UIFont.TT Hoves.medium(15.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 8.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 48.0),
+                arg.widthAnchor.constraint(equalToConstant: 214.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = frame97View
+            _ = песенбезограниченийLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Frame16View: UIView {
+        lazy var frame98View: Frame98View = Frame98View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 4.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 40.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var голосовиучастиевголосованиизановыепесниLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "+10 голосов и участие в голосовании \nза новые песни"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 15.0, weight: .medium) //UIFont.TT Hoves.medium(15.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 48.0),
+                arg.widthAnchor.constraint(equalToConstant: 275.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = frame98View
+            _ = голосовиучастиевголосованиизановыепесниLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Frame17View: UIView {
+        lazy var frame99View: Frame99View = Frame99View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 5.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 40.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var прослушиваниезаписисвоегоголосаLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "Прослушивание записи \nсвоего голоса"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 15.0, weight: .medium) //UIFont.TT Hoves.medium(15.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 48.0),
+                arg.widthAnchor.constraint(equalToConstant: 254.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = frame99View
+            _ = прослушиваниезаписисвоегоголосаLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.FeautersView.Frame14View {
+    class Frame96View: UIView {
+        lazy var vectorView: VectorView = VectorView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 12.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 20.0),
+                arg.heightAnchor.constraint(equalToConstant: 16.666656494140625)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = vectorView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.FeautersView.Frame14View.Frame96View {
+    class VectorView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.FeautersView.Frame15View {
+    class Frame97View: UIView {
+        lazy var vectorView: VectorView = VectorView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 10.0009765625),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 12.0),
+                arg.widthAnchor.constraint(equalToConstant: 16.0),
+                arg.heightAnchor.constraint(equalToConstant: 19.998947143554688)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = vectorView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.FeautersView.Frame15View.Frame97View {
+    class VectorView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.FeautersView.Frame16View {
+    class Frame98View: UIView {
+        lazy var vectorView: VectorView = VectorView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 9.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 19.998291015625),
+                arg.heightAnchor.constraint(equalToConstant: 20.000045776367188)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = vectorView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.FeautersView.Frame16View.Frame98View {
+    class VectorView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.FeautersView.Frame17View {
+    class Frame99View: UIView {
+        lazy var vectorView: VectorView = VectorView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 11.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 20.0),
+                arg.heightAnchor.constraint(equalToConstant: 18.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = vectorView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.FeautersView.Frame17View.Frame99View {
+    class VectorView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.Conf2View {
+    class Rectangle54View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9921568632125854, green: 0.3803921639919281, blue: 0.3803921639919281, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Rectangle52View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.39232954382896423, green: 0.8120471239089966, blue: 0.7845655679702759, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Rectangle51View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9541666507720947, green: 0.8168461322784424, blue: 0.3299826383590698, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Vector5View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9921568632125854, green: 0.3803921639919281, blue: 0.3803921639919281, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class RectangleView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            let bimg = UIImageView(image: UIImage(named: "6079c295c0efcdcdf7254264e0f0f0ea3a64d5b5"))
+            bimg.frame = frame
+            addSubview(bimg)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Rectangle1View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            let bimg = UIImageView(image: UIImage(named: "57edbb77c718d3246c1259567028e1af88699c0c"))
+            bimg.frame = frame
+            addSubview(bimg)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.Component68View {
+    class Rectangle470View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+</code></pre></div><pre style="background-color: #eee;padding:10px">class IphonexViewController: UIViewController {
+    lazy var twoColumnOptionWithSubtextSelectedStateView: TwocolumnoptionwithsubtextselectedstateView = TwocolumnoptionwithsubtextselectedstateView(autolayout: true).add(to: view) { arg in
+        arg.layer.cornerRadius = 15.0
+        arg.clipsToBounds = true
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: -336.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 1643.0),
+            arg.widthAnchor.constraint(equalToConstant: 345.0),
+            arg.heightAnchor.constraint(equalToConstant: 75.0)
+        ])
+    }
+    lazy var rightSideView: RightsideView = RightsideView(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 16.3306884765625),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 288.66680908203125),
+            arg.widthAnchor.constraint(equalToConstant: 66.66122436523438),
+            arg.heightAnchor.constraint(equalToConstant: 11.33599853515625)
+        ])
+    }
+    lazy var leftSideView: LeftsideView = LeftsideView(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 11.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 19.0),
+            arg.widthAnchor.constraint(equalToConstant: 54.0),
+            arg.heightAnchor.constraint(equalToConstant: 21.0)
+        ])
+    }
+    lazy var backuppurchaseView: BackuppurchaseView = BackuppurchaseView(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 746.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 107.0),
+            arg.widthAnchor.constraint(equalToConstant: 162.0),
+            arg.heightAnchor.constraint(equalToConstant: 20.0)
+        ])
+    }
+    lazy var трудностисоплатойLabel: UILabel = UILabel(autolayout: true).add(to: view) { arg in
+        arg.text = "Трудности с оплатой?"
+        arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        arg.font = UIFont.systemFont(ofSize: 12.0, weight: .regular) //UIFont.Inter.regular(12.0)
+        arg.numberOfLines = 0
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 648.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 222.0),
+            arg.widthAnchor.constraint(equalToConstant: 133.0)
+        ])
+    }
+    lazy var feautersView: FeautersView = FeautersView(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 410.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32.0),
+            arg.widthAnchor.constraint(equalToConstant: 311.0),
+            arg.heightAnchor.constraint(equalToConstant: 226.0)
+        ])
+    }
+    lazy var titleLabel: UILabel = UILabel(autolayout: true).add(to: view) { arg in
+        arg.text = "Subscribe \nand be PRO"
+        arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        arg.font = UIFont.systemFont(ofSize: 46.0, weight: .regular) //UIFont.TT Hoves.regular(46.0)
+        arg.numberOfLines = 0
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 270.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            arg.widthAnchor.constraint(equalToConstant: 345.0)
+        ])
+    }
+    lazy var conf2View: Conf2View = Conf2View(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 44.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 67.0),
+            arg.widthAnchor.constraint(equalToConstant: 278.0001220703125),
+            arg.heightAnchor.constraint(equalToConstant: 210.0)
+        ])
+    }
+    lazy var component68View: Component68View = Component68View(autolayout: true).add(to: view) { arg in
+        NSLayoutConstraint.activate([
+            arg.topAnchor.constraint(equalTo: view.topAnchor, constant: 682.0),
+            arg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            arg.widthAnchor.constraint(equalToConstant: 345.0),
+            arg.heightAnchor.constraint(equalToConstant: 48.0)
+        ])
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let glr = CAGradientLayer()
+        glr.type = .axial
+        glr.colors = [UIColor(red: 0.9921568632125854, green: 0.3803921639919281, blue: 0.3803921639919281, alpha: 1.0).cgColor,UIColor(red: 0.9375, green: 0.2421875, blue: 0.5740413665771484, alpha: 1.0).cgColor,UIColor(red: 0.6313725709915161, green: 0.3450980484485626, blue: 0.8235294222831726, alpha: 1.0).cgColor]
+        glr.locations = [0.0,0.5364583134651184,1.0]
+        glr.startPoint = CGPoint(x: 1.3912789751649099e-08, y: -0.4966109898596187)
+        glr.endPoint = CGPoint(x: 1.000000013853118, y: -0.4992760831519263)
+        glr.frame = view.frame
+        view.layer.addSublayer(glr)
+        _ = twoColumnOptionWithSubtextSelectedStateView
+        _ = rightSideView
+        _ = leftSideView
+        _ = backuppurchaseView
+        _ = трудностисоплатойLabel
+        _ = feautersView
+        _ = titleLabel
+        _ = conf2View
+        _ = component68View
+    }
+}
+extension IphonexViewController {
+    class TwocolumnoptionwithsubtextselectedstateView: UIView {
+        lazy var headerView: HeaderView = HeaderView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 15.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 325.0),
+                arg.heightAnchor.constraint(equalToConstant: 21.0)
+            ])
+        }
+        lazy var subtextView: SubtextView = SubtextView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 44.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 325.0),
+                arg.heightAnchor.constraint(equalToConstant: 16.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.12916666269302368, green: 0.12916666269302368, blue: 0.12916666269302368, alpha: 1.0)
+            _ = headerView
+            _ = subtextView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class RightsideView: UIView {
+        lazy var batteryView: BatteryView = BatteryView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.002685546875),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 42.33319091796875),
+                arg.widthAnchor.constraint(equalToConstant: 24.328033447265625),
+                arg.heightAnchor.constraint(equalToConstant: 11.33331298828125)
+            ])
+        }
+        lazy var wifiView: WifiView = WifiView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 22.027069091796875),
+                arg.widthAnchor.constraint(equalToConstant: 15.272369384765625),
+                arg.heightAnchor.constraint(equalToConstant: 10.965576171875)
+            ])
+        }
+        lazy var mobileSignalView: MobilesignalView = MobilesignalView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.3359375),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 17.0),
+                arg.heightAnchor.constraint(equalToConstant: 10.66668701171875)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = batteryView
+            _ = wifiView
+            _ = mobileSignalView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class LeftsideView: UIView {
+        lazy var statusBartimeView: StatusbartimeView = StatusbartimeView(autolayout: true).add(to: self) { arg in
+            arg.layer.cornerRadius = 24.0
+            arg.clipsToBounds = true
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 54.0),
+                arg.heightAnchor.constraint(equalToConstant: 21.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = statusBartimeView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class BackuppurchaseView: UIView {
+        lazy var продолжитьбезподпискиLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "Продолжить без подписки"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 12.0, weight: .regular) //UIFont.Inter.regular(12.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 162.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = продолжитьбезподпискиLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class FeautersView: UIView {
+        lazy var frame14View: Frame14View = Frame14View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 311.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var frame15View: Frame15View = Frame15View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 56.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 311.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var frame16View: Frame16View = Frame16View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 112.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 311.0),
+                arg.heightAnchor.constraint(equalToConstant: 48.0)
+            ])
+        }
+        lazy var frame17View: Frame17View = Frame17View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 176.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 311.0),
+                arg.heightAnchor.constraint(equalToConstant: 50.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = frame14View
+            _ = frame15View
+            _ = frame16View
+            _ = frame17View
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Conf2View: UIView {
+        lazy var rectangle54View: Rectangle54View = Rectangle54View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 149.2808837890625),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 28.95703125),
+                arg.widthAnchor.constraint(equalToConstant: 9.06304931640625),
+                arg.heightAnchor.constraint(equalToConstant: 9.09356689453125)
+            ])
+        }
+        lazy var rectangle52View: Rectangle52View = Rectangle52View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 87.1640625),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 58.9130859375),
+                arg.widthAnchor.constraint(equalToConstant: 11.2540283203125),
+                arg.heightAnchor.constraint(equalToConstant: 11.2918701171875)
+            ])
+        }
+        lazy var rectangle51View: Rectangle51View = Rectangle51View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 118.222412109375),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 9.41253662109375),
+                arg.heightAnchor.constraint(equalToConstant: 9.4442138671875)
+            ])
+        }
+        lazy var vector5View: Vector5View = Vector5View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 63.1187744140625),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 233.65451049804688),
+                arg.widthAnchor.constraint(equalToConstant: 15.687652587890625),
+                arg.heightAnchor.constraint(equalToConstant: 13.05499267578125)
+            ])
+        }
+        lazy var rectangleView: RectangleView = RectangleView(autolayout: true).add(to: self) { arg in
+            arg.layer.cornerRadius = 12.0
+            arg.clipsToBounds = true
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: -19.03582763671875),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15.9765625),
+                arg.widthAnchor.constraint(equalToConstant: 153.7728271484375),
+                arg.heightAnchor.constraint(equalToConstant: 214.40350341796875)
+            ])
+        }
+        lazy var rectangle1View: Rectangle1View = Rectangle1View(autolayout: true).add(to: self) { arg in
+            arg.layer.cornerRadius = 12.0
+            arg.clipsToBounds = true
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 66.90118408203125),
+                arg.widthAnchor.constraint(equalToConstant: 211.09893798828125),
+                arg.heightAnchor.constraint(equalToConstant: 210.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = rectangle54View
+            _ = rectangle52View
+            _ = rectangle51View
+            _ = vector5View
+            _ = rectangleView
+            _ = rectangle1View
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Component68View: UIView {
+        lazy var rectangle470View: Rectangle470View = Rectangle470View(autolayout: true).add(to: self) { arg in
+            arg.layer.cornerRadius = 10.0
+            arg.clipsToBounds = true
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 345.0),
+                arg.heightAnchor.constraint(equalToConstant: 48.0)
+            ])
+        }
+        lazy var подписатьсяза9вмесяцLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "Подписаться за $9 в год"
+            let colors = [UIColor(red: 0.9921568632125854, green: 0.3803921639919281, blue: 0.3803921639919281, alpha: 1.0).cgColor,UIColor(red: 0.9375, green: 0.2421875, blue: 0.5740413665771484, alpha: 1.0).cgColor,UIColor(red: 0.6313725709915161, green: 0.3450980484485626, blue: 0.8235294222831726, alpha: 1.0).cgColor]
+            let gradient = UIImage.gradiented(colors, size: 182.0, horizontal: true)
+            arg.textColor = UIColor(patternImage: gradient)
+            arg.font = UIFont.systemFont(ofSize: 16.0, weight: .medium) //UIFont.TT Hoves.medium(16.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 15.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 71.0),
+                arg.widthAnchor.constraint(equalToConstant: 182.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = rectangle470View
+            _ = подписатьсяза9вмесяцLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.TwocolumnoptionwithsubtextselectedstateView {
+    class HeaderView: UIView {
+        lazy var monthsLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "All time"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 18.0, weight: .bold) //UIFont.Arial.bold(18.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 63.0)
+            ])
+        }
+        lazy var Label: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "$49.99"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 18.0, weight: .bold) //UIFont.Arial.bold(18.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 83.0),
+                arg.widthAnchor.constraint(equalToConstant: 232.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = monthsLabel
+            _ = Label
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class SubtextView: UIView {
+        lazy var dayfreetrialLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = ""
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 14.0, weight: .regular) //UIFont.Arial.regular(14.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 0.0)
+            ])
+        }
+        lazy var weekLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = ""
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 14.0, weight: .regular) //UIFont.Arial.regular(14.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20.0),
+                arg.widthAnchor.constraint(equalToConstant: 295.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = dayfreetrialLabel
+            _ = weekLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.TwocolumnoptionwithsubtextselectedstateView.HeaderView {}
+
+extension IphonexViewController.TwocolumnoptionwithsubtextselectedstateView.SubtextView {}
+
+extension IphonexViewController.RightsideView {
+    class BatteryView: UIView {
+        lazy var rectangleView: RectangleView = RectangleView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 22.0),
+                arg.heightAnchor.constraint(equalToConstant: 11.33331298828125)
+            ])
+        }
+        lazy var combinedShapeView: CombinedshapeView = CombinedshapeView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 3.66668701171875),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 23.0),
+                arg.widthAnchor.constraint(equalToConstant: 1.328033447265625),
+                arg.heightAnchor.constraint(equalToConstant: 4.0)
+            ])
+        }
+        lazy var rectangle1View: Rectangle1View = Rectangle1View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 2.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 2.0),
+                arg.widthAnchor.constraint(equalToConstant: 18.0),
+                arg.heightAnchor.constraint(equalToConstant: 7.33331298828125)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = rectangleView
+            _ = combinedShapeView
+            _ = rectangle1View
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class WifiView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class MobilesignalView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.RightsideView.BatteryView {
+    class RectangleView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class CombinedshapeView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Rectangle1View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.LeftsideView {
+    class StatusbartimeView: UIView {
+        lazy var Label: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "9:41"
+            arg.textColor = UIColor(red: 0.9490196108818054, green: 0.9490196108818054, blue: 0.9490196108818054, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 15.0, weight: .semibold) //UIFont.SF Pro Text.semibold(15.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 1.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 54.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = Label
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.LeftsideView.StatusbartimeView {}
+
+extension IphonexViewController.BackuppurchaseView {}
+
+extension IphonexViewController.FeautersView {
+    class Frame14View: UIView {
+        lazy var frame96View: Frame96View = Frame96View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 40.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var безрекламыLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "Без рекламы"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 15.0, weight: .medium) //UIFont.TT Hoves.medium(15.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 8.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 48.0),
+                arg.widthAnchor.constraint(equalToConstant: 92.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = frame96View
+            _ = безрекламыLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Frame15View: UIView {
+        lazy var frame97View: Frame97View = Frame97View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 40.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var песенбезограниченийLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "14 800 песен без ограничений"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 15.0, weight: .medium) //UIFont.TT Hoves.medium(15.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 8.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 48.0),
+                arg.widthAnchor.constraint(equalToConstant: 214.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = frame97View
+            _ = песенбезограниченийLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Frame16View: UIView {
+        lazy var frame98View: Frame98View = Frame98View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 4.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 40.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var голосовиучастиевголосованиизановыепесниLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "+10 голосов и участие в голосовании \nза новые песни"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 15.0, weight: .medium) //UIFont.TT Hoves.medium(15.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 48.0),
+                arg.widthAnchor.constraint(equalToConstant: 275.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = frame98View
+            _ = голосовиучастиевголосованиизановыепесниLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Frame17View: UIView {
+        lazy var frame99View: Frame99View = Frame99View(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 5.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+                arg.widthAnchor.constraint(equalToConstant: 40.0),
+                arg.heightAnchor.constraint(equalToConstant: 40.0)
+            ])
+        }
+        lazy var прослушиваниезаписисвоегоголосаLabel: UILabel = UILabel(autolayout: true).add(to: self) { arg in
+            arg.text = "Прослушивание записи \nсвоего голоса"
+            arg.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            arg.font = UIFont.systemFont(ofSize: 15.0, weight: .medium) //UIFont.TT Hoves.medium(15.0)
+            arg.numberOfLines = 0
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 48.0),
+                arg.widthAnchor.constraint(equalToConstant: 254.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = frame99View
+            _ = прослушиваниезаписисвоегоголосаLabel
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.FeautersView.Frame14View {
+    class Frame96View: UIView {
+        lazy var vectorView: VectorView = VectorView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 12.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 20.0),
+                arg.heightAnchor.constraint(equalToConstant: 16.666656494140625)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = vectorView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.FeautersView.Frame14View.Frame96View {
+    class VectorView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.FeautersView.Frame15View {
+    class Frame97View: UIView {
+        lazy var vectorView: VectorView = VectorView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 10.0009765625),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 12.0),
+                arg.widthAnchor.constraint(equalToConstant: 16.0),
+                arg.heightAnchor.constraint(equalToConstant: 19.998947143554688)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = vectorView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.FeautersView.Frame15View.Frame97View {
+    class VectorView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.FeautersView.Frame16View {
+    class Frame98View: UIView {
+        lazy var vectorView: VectorView = VectorView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 9.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 19.998291015625),
+                arg.heightAnchor.constraint(equalToConstant: 20.000045776367188)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = vectorView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.FeautersView.Frame16View.Frame98View {
+    class VectorView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.FeautersView.Frame17View {
+    class Frame99View: UIView {
+        lazy var vectorView: VectorView = VectorView(autolayout: true).add(to: self) { arg in
+            NSLayoutConstraint.activate([
+                arg.topAnchor.constraint(equalTo: self.topAnchor, constant: 11.0),
+                arg.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                arg.widthAnchor.constraint(equalToConstant: 20.0),
+                arg.heightAnchor.constraint(equalToConstant: 18.0)
+            ])
+        }
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            _ = vectorView
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+extension IphonexViewController.FeautersView.Frame17View.Frame99View {
+    class VectorView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.Conf2View {
+    class Rectangle54View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9921568632125854, green: 0.3803921639919281, blue: 0.3803921639919281, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Rectangle52View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.39232954382896423, green: 0.8120471239089966, blue: 0.7845655679702759, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Rectangle51View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9541666507720947, green: 0.8168461322784424, blue: 0.3299826383590698, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Vector5View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 0.9921568632125854, green: 0.3803921639919281, blue: 0.3803921639919281, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class RectangleView: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            let bimg = UIImageView(image: UIImage(named: "6079c295c0efcdcdf7254264e0f0f0ea3a64d5b5"))
+            bimg.frame = frame
+            addSubview(bimg)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    class Rectangle1View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            let bimg = UIImageView(image: UIImage(named: "57edbb77c718d3246c1259567028e1af88699c0c"))
+            bimg.frame = frame
+            addSubview(bimg)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+
+extension IphonexViewController.Component68View {
+    class Rectangle470View: UIView {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+}
+</pre>
