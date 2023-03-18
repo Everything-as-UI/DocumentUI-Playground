@@ -29,10 +29,13 @@ struct CodeBlock<Definition, Args, Body>: TextDocument where Definition: TextDoc
     }
 }
 enum Keyword: String {
-    case `class`, `enum`, `extension`, `func`, `protocol`, `struct`
+    case `class`, `enum`, `func`, `protocol`, `struct`, `typealias`, `extension`
     case `fileprivate`, `internal`, `private`, `public`, `open`
     case `let`, `var`
-    case `lazy`, `static`
+    case `lazy`, `static`, `weak`, `unowned`
+    case `async`, `await`, `throws`, `rethrows`
+    case `final`
+    case propertyWrapper, main
 }
 extension Keyword: TextDocument {
     var textBody: some TextDocument { rawValue }

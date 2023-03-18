@@ -11,7 +11,7 @@ if isDevelop {
     dependencies = [
         .package(path: "../DocumentUI"),
         .package(name: "AttributedTextUI", path: "../AttributedText"),
-        .package(name: "FigmaKit", path: "~/Downloads/FigmaKit-main")
+        .package(name: "FigmaKit", path: "~/Downloads/Research Projects/FigmaKit-main")
     ]
 } else {
     dependencies = [
