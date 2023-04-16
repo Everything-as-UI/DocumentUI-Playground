@@ -46,7 +46,7 @@ struct ContentView: View {
             } else {
                 TextView { textContent }
             }
-            Button("Toggle view") {
+            Button("Toggle to \(useNativeText ? "NSAttributedString" : "SwiftUI AttributedString")") {
                 useNativeText.toggle()
             }
             Text {

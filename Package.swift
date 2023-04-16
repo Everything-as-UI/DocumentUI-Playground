@@ -1,13 +1,10 @@
-// swift-tools-version: 5.6
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version: 5.7
 
 import PackageDescription
 
 let dependencies: [Package.Dependency]
 
-let env = Context.environment["USER"]
-let isDevelop = env == "K-o-D-e-N"
-if isDevelop {
+if Context.environment["ALLUI_ENV"] == "LOCAL" {
     dependencies = [
         .package(path: "../DocumentUI"),
         .package(name: "AttributedTextUI", path: "../AttributedText"),
